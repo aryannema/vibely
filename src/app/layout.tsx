@@ -27,8 +27,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geistSans.variable)}>
-      <body className={cn(geistMono.variable, "antialiased")}>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <ClerkProvider>
           <ThemeProvider
             attribute="class"
